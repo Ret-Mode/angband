@@ -24,3 +24,6 @@ mk/buildsys.mk
 *~
 .DS_Store
 *.sublime*
+obj/
+libpng12.dll
+zlib1.dll

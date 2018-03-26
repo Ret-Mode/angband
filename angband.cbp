@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="angband" />
+		<Option pch_mode="2" />
+		<Option compiler="qt530" />
+		<Build>
+			<Target title="Debug">
+				<Option output="angband_d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="qt530" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="angband" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="qt530" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DWINDOWS" />
+			<Add option="-DSOUND" />
+			<Add directory="src" />
+			<Add directory="src/win" />
+			<Add directory="src/win/include" />
+		</Compiler>
+		<Linker>
+			<Add library="src/win/lib/libpng.lib" />
+			<Add library="src/win/lib/zlib.lib" />
+			<Add library="winmm" />
+			<Add library="gdi32" />
+			<Add library="comdlg32" />
+			<Add library="msimg32" />
+		</Linker>
+		<ExtraCommands>
+			<Add before="ang.bat" />
+		</ExtraCommands>
+		<Unit filename="src/alloc.h" />
+		<Unit filename="src/angband.h" />
+		<Unit filename="src/buildid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/buildid.h" />
+		<Unit filename="src/cave-map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cave-square.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cave-view.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cave.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cave.h" />
+		<Unit filename="src/cmd-cave.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cmd-core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cmd-core.h" />
+		<Unit filename="src/cmd-misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cmd-obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cmd-pickup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cmds.h" />
+		<Unit filename="src/config.h" />
+		<Unit filename="src/datafile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/datafile.h" />
+		<Unit filename="src/debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/debug.h" />
+		<Unit filename="src/effects.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/effects.h" />
+		<Unit filename="src/game-event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/game-event.h" />
+		<Unit filename="src/game-input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/game-input.h" />
+		<Unit filename="src/game-world.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/game-world.h" />
+		<Unit filename="src/gen-cave.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/gen-chunk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/gen-monster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/gen-room.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/gen-util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/generate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/generate.h" />
+		<Unit filename="src/grafmode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/grafmode.h" />
+		<Unit filename="src/guid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/guid.h" />
+		<Unit filename="src/h-basic.h" />
+		<Unit filename="src/hint.h" />
+		<Unit filename="src/init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/init.h" />
+		<Unit filename="src/list-dun-profiles.h" />
+		<Unit filename="src/list-effects.h" />
+		<Unit filename="src/list-elements.h" />
+		<Unit filename="src/list-equip-slots.h" />
+		<Unit filename="src/list-history-types.h" />
+		<Unit filename="src/list-ignore-types.h" />
+		<Unit filename="src/list-kind-flags.h" />
+		<Unit filename="src/list-message.h" />
+		<Unit filename="src/list-mon-message.h" />
+		<Unit filename="src/list-mon-race-flags.h" />
+		<Unit filename="src/list-mon-spells.h" />
+		<Unit filename="src/list-mon-temp-flags.h" />
+		<Unit filename="src/list-mon-timed.h" />
+		<Unit filename="src/list-object-flags.h" />
+		<Unit filename="src/list-object-modifiers.h" />
+		<Unit filename="src/list-options.h" />
+		<Unit filename="src/list-origins.h" />
+		<Unit filename="src/list-parser-errors.h" />
+		<Unit filename="src/list-player-flags.h" />
+		<Unit filename="src/list-player-timed.h" />
+		<Unit filename="src/list-projections.h" />
+		<Unit filename="src/list-randart-properties.h" />
+		<Unit filename="src/list-rooms.h" />
+		<Unit filename="src/list-square-flags.h" />
+		<Unit filename="src/list-stats.h" />
+		<Unit filename="src/list-summon-types.h" />
+		<Unit filename="src/list-terrain-flags.h" />
+		<Unit filename="src/list-trap-flags.h" />
+		<Unit filename="src/list-tvals.h" />
+		<Unit filename="src/load.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/main-win.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/main.h" />
+		<Unit filename="src/message.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/message.h" />
+		<Unit filename="src/mon-attack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-attack.h" />
+		<Unit filename="src/mon-blows.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-blows.h" />
+		<Unit filename="src/mon-desc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-desc.h" />
+		<Unit filename="src/mon-init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-init.h" />
+		<Unit filename="src/mon-list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-list.h" />
+		<Unit filename="src/mon-lore.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-lore.h" />
+		<Unit filename="src/mon-make.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-make.h" />
+		<Unit filename="src/mon-move.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-move.h" />
+		<Unit filename="src/mon-msg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-msg.h" />
+		<Unit filename="src/mon-predicate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-predicate.h" />
+		<Unit filename="src/mon-spell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-spell.h" />
+		<Unit filename="src/mon-summon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-summon.h" />
+		<Unit filename="src/mon-timed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-timed.h" />
+		<Unit filename="src/mon-util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mon-util.h" />
+		<Unit filename="src/monster.h" />
+		<Unit filename="src/obj-chest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-chest.h" />
+		<Unit filename="src/obj-curse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-curse.h" />
+		<Unit filename="src/obj-desc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-desc.h" />
+		<Unit filename="src/obj-gear.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-gear.h" />
+		<Unit filename="src/obj-ignore.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-ignore.h" />
+		<Unit filename="src/obj-info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-info.h" />
+		<Unit filename="src/obj-init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-init.h" />
+		<Unit filename="src/obj-knowledge.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-knowledge.h" />
+		<Unit filename="src/obj-list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-list.h" />
+		<Unit filename="src/obj-make.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-make.h" />
+		<Unit filename="src/obj-pile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-pile.h" />
+		<Unit filename="src/obj-power.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-power.h" />
+		<Unit filename="src/obj-properties.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-properties.h" />
+		<Unit filename="src/obj-randart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-randart.h" />
+		<Unit filename="src/obj-slays.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-slays.h" />
+		<Unit filename="src/obj-tval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-tval.h" />
+		<Unit filename="src/obj-util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/obj-util.h" />
+		<Unit filename="src/object.h" />
+		<Unit filename="src/option.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/option.h" />
+		<Unit filename="src/parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/parser.h" />
+		<Unit filename="src/player-attack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-attack.h" />
+		<Unit filename="src/player-birth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-birth.h" />
+		<Unit filename="src/player-calcs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-calcs.h" />
+		<Unit filename="src/player-class.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-history.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-history.h" />
+		<Unit filename="src/player-path.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-path.h" />
+		<Unit filename="src/player-quest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-quest.h" />
+		<Unit filename="src/player-race.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-spell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-spell.h" />
+		<Unit filename="src/player-timed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-timed.h" />
+		<Unit filename="src/player-util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player-util.h" />
+		<Unit filename="src/player.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/player.h" />
+		<Unit filename="src/project-feat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/project-mon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/project-obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/project-player.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/project.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/project.h" />
+		<Unit filename="src/randname.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/randname.h" />
+		<Unit filename="src/save.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/savefile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/savefile.h" />
+		<Unit filename="src/score.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/score.h" />
+		<Unit filename="src/snd-win.h" />
+		<Unit filename="src/sound-core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/sound.h" />
+		<Unit filename="src/source.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/source.h" />
+		<Unit filename="src/store.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/store.h" />
+		<Unit filename="src/target.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/target.h" />
+		<Unit filename="src/trap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/trap.h" />
+		<Unit filename="src/ui-birth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-birth.h" />
+		<Unit filename="src/ui-command.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-command.h" />
+		<Unit filename="src/ui-context.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-context.h" />
+		<Unit filename="src/ui-curse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-curse.h" />
+		<Unit filename="src/ui-death.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-death.h" />
+		<Unit filename="src/ui-display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-display.h" />
+		<Unit filename="src/ui-event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-event.h" />
+		<Unit filename="src/ui-game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-game.h" />
+		<Unit filename="src/ui-help.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-help.h" />
+		<Unit filename="src/ui-history.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-history.h" />
+		<Unit filename="src/ui-init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-init.h" />
+		<Unit filename="src/ui-input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-input.h" />
+		<Unit filename="src/ui-keymap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-keymap.h" />
+		<Unit filename="src/ui-knowledge.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-knowledge.h" />
+		<Unit filename="src/ui-map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-map.h" />
+		<Unit filename="src/ui-menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-menu.h" />
+		<Unit filename="src/ui-mon-list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-mon-list.h" />
+		<Unit filename="src/ui-mon-lore.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-mon-lore.h" />
+		<Unit filename="src/ui-obj-list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-obj-list.h" />
+		<Unit filename="src/ui-object.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-object.h" />
+		<Unit filename="src/ui-options.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-options.h" />
+		<Unit filename="src/ui-output.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-output.h" />
+		<Unit filename="src/ui-player.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-player.h" />
+		<Unit filename="src/ui-prefs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-prefs.h" />
+		<Unit filename="src/ui-score.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-score.h" />
+		<Unit filename="src/ui-signals.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-signals.h" />
+		<Unit filename="src/ui-spell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-spell.h" />
+		<Unit filename="src/ui-store.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-store.h" />
+		<Unit filename="src/ui-target.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-target.h" />
+		<Unit filename="src/ui-term.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ui-term.h" />
+		<Unit filename="src/win/angband.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/win/readdib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/win/readdib.h" />
+		<Unit filename="src/win/readpng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/win/scrnshot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/win/win-layout.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/win/win-menu.h" />
+		<Unit filename="src/win/win-term.h" />
+		<Unit filename="src/wiz-debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/wiz-spoil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/wiz-stats.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/wizard.h" />
+		<Unit filename="src/z-bitflag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-bitflag.h" />
+		<Unit filename="src/z-color.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-color.h" />
+		<Unit filename="src/z-debug.h" />
+		<Unit filename="src/z-dice.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-dice.h" />
+		<Unit filename="src/z-expression.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-expression.h" />
+		<Unit filename="src/z-file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-file.h" />
+		<Unit filename="src/z-form.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-form.h" />
+		<Unit filename="src/z-quark.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-quark.h" />
+		<Unit filename="src/z-queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-queue.h" />
+		<Unit filename="src/z-rand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-rand.h" />
+		<Unit filename="src/z-set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-set.h" />
+		<Unit filename="src/z-textblock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-textblock.h" />
+		<Unit filename="src/z-type.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-type.h" />
+		<Unit filename="src/z-util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-util.h" />
+		<Unit filename="src/z-virt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/z-virt.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
